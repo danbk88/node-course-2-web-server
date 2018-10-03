@@ -60,6 +60,13 @@ app.get('/about', (req, res) => {
     });
 });
 
+app.get('/projects', (req, res) => {
+    res.render('projects.hbs', {
+        // Injecting ing data into the html page:
+        pageTitle: 'My projects:',
+    });
+});
+
 app.get('/bad', (req, res) => {
     res.send({
         errorMsg: 'Error handling request'
@@ -69,3 +76,6 @@ app.get('/bad', (req, res) => {
 app.listen(port, () => {
     console.log(`Server is up on port ${port}`);
 });
+
+
+//https://pacific-wildwood-56761.herokuapp.com/
